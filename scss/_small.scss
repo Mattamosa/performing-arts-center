@@ -18,11 +18,13 @@ body {
   font-family: $defaultFont;
   font-weight: $boldWeight;
   color: $fontColor;
+  background-color: #f5f5f5;
 }
 
+// Header Styling
 #headerWrapper {
-  background-color: #8a8a8a;
-  color: $secondaryColor;
+  background-color: $primaryColor;
+  color: white;
   position: relative;
   padding: 1rem $gutter;
 }
@@ -31,12 +33,13 @@ header {
   display: flex;
   align-items: flex-end;
   gap: 8px;
-  h1 {
-    padding-left: 0;
-    margin: 0;
-    font-size: 1.4rem;
-    font-weight: $normalWeight;
-  }
+}
+
+header h1 {
+  padding-left: 0;
+  margin: 0;
+  font-size: 1.4rem;
+  font-weight: $normalWeight;
 }
 
 // Phone-link and Phone-icon styles
@@ -51,7 +54,7 @@ header {
 
 // Style for the phone number link
 .phone-link {
-  color: #007bff;
+  color: white;
   text-decoration: none;
   font-size: 25px;
   font-family: $navFont;
@@ -77,10 +80,9 @@ header {
   height: 40px;
 }
 
-// Navigation Start
-
+// Navigation
 #navWrapper {
-  background-color: #01b2d6;
+  background-color: $secondaryColor;
 }
 
 nav ul {
@@ -92,50 +94,57 @@ nav ul {
 }
 
 nav li.active {
-  background-color: white;
+  background-color: #676767;
   transition: background-color 0.1s ease-in-out;
-  border-radius: 4px;
+  border-bottom-left-radius: 8px;
+  border-bottom-right-radius: 8px;
 }
 
 nav li.active:hover {
-  background-color: #f1f1f1;
+  background-color: #818181;
+  border-bottom-left-radius: 8px;
+  border-bottom-right-radius: 8px;
+  transition: background-color 0.3s ease-in-out;
 }
 
 nav a {
   display: block;
   padding: 0.75rem;
-  color: #241818;
+  color: white;
   text-decoration: none;
   font-family: $navFont;
   font-weight: $navFontWeight;
   font-size: 1.2rem;
 }
 
-// Main styling
+nav a:hover {
+  color: #f5f5f5;
+}
 
+// Main styling
 h1 {
   padding-left: 16px;
 }
 
 h2 {
-  background-color: rgb(204, 146, 0);
+  background-color: $primaryColor;
   margin: 0;
   padding: 4px 0 6px 0;
   border-top-left-radius: 16px;
   border-top-right-radius: 16px;
   text-align: center;
   font-size: 21px;
-  color: rgb(230, 230, 230);
+  color: #ffffff;
 }
 
 h3 {
-  background-color: rgb(100, 0, 133);
+  background-color: #474747;
   margin: 0;
   padding: 4px 0 6px 0;
   border-bottom-left-radius: 6px;
   border-bottom-right-radius: 6px;
   text-align: center;
-  color: rgb(230, 230, 230);
+  color: #ffffff;
   font-size: 18px;
 }
 
@@ -155,14 +164,15 @@ section div {
   margin-bottom: -3px;
 }
 
-// Begin of footer
+// Footer
 #footerWrapper {
-  background-color: #01b2d6;
+  background-color: $primaryColor;
 }
+
 footer {
   padding: 0.5rem $gutter;
   p {
-    color: #241818;
+    color: #ffffff;
     margin: 0;
     font-family: $navFont;
     text-align: center;

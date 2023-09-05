@@ -28,9 +28,22 @@ nav a {
 }
 
 nav li.active {
-  border-radius: 9px;
-  border-top: 3px solid #01b2d6;
-  border-bottom: 3px solid #01b2d6;
+  border-bottom-left-radius: 8px;
+  border-bottom-right-radius: 8px;
+}
+
+nav li.active:hover {
+  background-color: #818181;
+  border-bottom-left-radius: 8px;
+  border-bottom-right-radius: 8px;
+  transition: background-color 0.3s ease-in-out;
+}
+
+nav li:hover {
+  background-color: #676767;
+  border-bottom-left-radius: 8px;
+  border-bottom-right-radius: 8px;
+  transition: background-color 0.3s ease-in-out;
 }
 
 // Main styling
