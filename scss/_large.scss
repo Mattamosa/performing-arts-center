@@ -1,0 +1,17 @@
+header,
+nav,
+main,
+footer {
+  max-width: 75rem;
+  margin: auto;
+}
+
+// Navigation
+nav a {
+  padding: 15px 18px 15px 18px;
+}
+
+// Main styling
+section {
+  grid-template-columns: 1fr 1fr 1fr;
+}

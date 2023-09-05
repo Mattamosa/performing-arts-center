@@ -1,0 +1,170 @@
+/* Prevent adjustments of font size after orientation changes.  */
+html {
+  -moz-text-size-adjust: none;
+  -webkit-text-size-adjust: none;
+  text-size-adjust: none;
+  height: 100%;
+}
+
+/*---- apply a natural box layout model to all elements -------*/
+* {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+body {
+  height: 100%;
+  font-family: $defaultFont;
+  font-weight: $boldWeight;
+  color: $fontColor;
+}
+
+#headerWrapper {
+  background-color: #8a8a8a;
+  color: $secondaryColor;
+  position: relative;
+  padding: 1rem $gutter;
+}
+
+header {
+  display: flex;
+  align-items: flex-end;
+  gap: 8px;
+  h1 {
+    padding-left: 0;
+    margin: 0;
+    font-size: 1.4rem;
+    font-weight: $normalWeight;
+  }
+}
+
+// Phone-link and Phone-icon styles
+#phone-link-container,
+#phone-icon {
+  position: absolute;
+  right: 0;
+  text-align: center;
+  margin: 0;
+  padding-right: 15px;
+}
+
+// Style for the phone number link
+.phone-link {
+  color: #007bff;
+  text-decoration: none;
+  font-size: 25px;
+  font-family: $navFont;
+  padding-right: 1px;
+}
+
+.phone-link:hover {
+  text-decoration: underline;
+}
+
+// Hide phone number on small screens
+#phone-link-container {
+  display: none;
+}
+
+// Display Phone Icon for small screens
+#phone-icon {
+  display: block;
+}
+
+#phone-icon img {
+  width: 40px;
+  height: 40px;
+}
+
+// Navigation Start
+
+#navWrapper {
+  background-color: #01b2d6;
+}
+
+nav ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+}
+
+nav li.active {
+  background-color: white;
+  transition: background-color 0.1s ease-in-out;
+  border-radius: 4px;
+}
+
+nav li.active:hover {
+  background-color: #f1f1f1;
+}
+
+nav a {
+  display: block;
+  padding: 0.75rem;
+  color: #241818;
+  text-decoration: none;
+  font-family: $navFont;
+  font-weight: $navFontWeight;
+  font-size: 1.2rem;
+}
+
+// Main styling
+
+h1 {
+  padding-left: 16px;
+}
+
+h2 {
+  background-color: rgb(204, 146, 0);
+  margin: 0;
+  padding: 4px 0 6px 0;
+  border-top-left-radius: 16px;
+  border-top-right-radius: 16px;
+  text-align: center;
+  font-size: 21px;
+  color: rgb(230, 230, 230);
+}
+
+h3 {
+  background-color: rgb(100, 0, 133);
+  margin: 0;
+  padding: 4px 0 6px 0;
+  border-bottom-left-radius: 6px;
+  border-bottom-right-radius: 6px;
+  text-align: center;
+  color: rgb(230, 230, 230);
+  font-size: 18px;
+}
+
+section {
+  display: grid;
+  grid-template-columns: 1fr;
+}
+
+section div {
+  width: 100%;
+  padding: 1rem $gutter;
+}
+
+#mainWrapper img {
+  width: 100%;
+  height: auto;
+  margin-bottom: -3px;
+}
+
+// Begin of footer
+#footerWrapper {
+  background-color: #01b2d6;
+}
+footer {
+  padding: 0.5rem $gutter;
+  p {
+    color: #241818;
+    margin: 0;
+    font-family: $navFont;
+    text-align: center;
+  }
+}
